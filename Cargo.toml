@@ -1,0 +1,10 @@
+[package]
+name = "sfo_editor"
+version = "0.1.0"
+authors = ["David Sawatzke <david-sawatzke@users.noreply.github.com>"]
+edition = "2018"
+
+[dependencies]
+scroll = "0.9"
+scroll_derive = "0.9"
+byteorder = "1.3"
