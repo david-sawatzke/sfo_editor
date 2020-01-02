@@ -165,7 +165,7 @@ fn main() {
             let entry = index.get(&name).expect("Couldn't find entry with key");
             let offset = (data.data_table_start + (*entry).index_table_entry.data_offset) as usize;
             LittleEndian::write_u32(&mut bytes[offset..offset + 4], value);
+            fs::write(&opt.file, bytes).unwrap();
         }
     }
-    fs::write(&opt.file, bytes).unwrap();
 }
